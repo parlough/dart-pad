@@ -25,10 +25,10 @@ class ParameterPopup {
     KeyCode.DOWN
   ];
 
+  static const HtmlEscape sanitizer = HtmlEscape();
+
   final Context context;
   final Editor editor;
-
-  final HtmlEscape sanitizer = const HtmlEscape();
 
   ParameterPopup(this.context, this.editor) {
     document.onKeyDown.listen(_handleKeyDown);

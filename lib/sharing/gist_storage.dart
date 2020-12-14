@@ -9,7 +9,7 @@ import 'package:dart_pad/sharing/gists.dart';
 
 /// A class to store gists in html's localStorage.
 class GistStorage {
-  static final String _key = 'gist';
+  static const String _key = 'gist';
 
   String _storedId;
 

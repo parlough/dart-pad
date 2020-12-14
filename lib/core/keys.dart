@@ -124,7 +124,7 @@ String makeKeyPresentable(String key) {
     }
     keyAsList = keyAsList.map<String>((s) {
       if (_unicodeMac.containsKey(s)) {
-        return _unicodeMac[s] as String;
+        return _unicodeMac[s];
       } else {
         return capitalize(s);
       }
@@ -141,7 +141,7 @@ String makeKeyPresentable(String key) {
 
 bool isMac() => _isMac;
 
-final Map _codeMap = {
+const Map<int, String> _codeMap = {
   KeyCode.ZERO: '0',
   KeyCode.ONE: '1',
   KeyCode.TWO: '2',
@@ -234,7 +234,7 @@ final Map _codeMap = {
   KeyCode.SHIFT: '', //
 };
 
-final Map _unicodeMac = {
+const Map<String, String> _unicodeMac = {
   'macctrl': '\u2303',
   'alt': '\u2325',
   'shift': '\u21E7',
